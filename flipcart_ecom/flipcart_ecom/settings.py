@@ -141,9 +141,8 @@ CONTACT_EMAIL="mlvijayalakshmiloganadhan@gmail.com"
 DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
 
 # cloudinary - django integrations
-
-cloudinary.config=(
-    cloud_name="dhy2vqhho",
-    api_key="794838745156711",
-    api_secret="Rmr-54isnIzktbRl-w4lzqM-VRw",
+cloudinary.config(
+    cloud_name = "dhy2vqhho",
+    api_key="783615335585822",
+    api_secret="UgtQ4BoE24nRF01MPK96NiJyfhg",
 )
