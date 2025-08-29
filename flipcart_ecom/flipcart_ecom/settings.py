@@ -14,6 +14,10 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# for cloudinary
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 
 # Quick-start development settings - unsuitable for production
@@ -38,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'flipcart',
+    'cloudinary'    
 ]
 
 MIDDLEWARE = [
@@ -134,3 +139,11 @@ EMAIL_HOST_USER="mlvijayalakshmiloganadhan@gmail.com"
 EMAIL_HOST_PASSWORD ="ucpi spys nzel ysje"
 CONTACT_EMAIL="mlvijayalakshmiloganadhan@gmail.com"
 DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
+
+# cloudinary - django integrations
+
+cloudinary.config=(
+    cloud_name="dhy2vqhho",
+    api_key="794838745156711",
+    api_secret="Rmr-54isnIzktbRl-w4lzqM-VRw",
+)
