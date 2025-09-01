@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-import dj_django_url
+
 database_url=os.environ.get("DATABASE_URL")
 
 # Password validation
