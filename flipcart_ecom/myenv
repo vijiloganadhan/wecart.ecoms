@@ -1,4 +1,0 @@
-SECRET_KEY=django-insecure-e(!dju=7bgi^*q_v*fmc+90@_iddew6(=1u9)x1^&v4hbq!#ja
-DEBUG = True
-DATABASE_URL=postgresql://wecart_project_user:eEuXll4uPajdJeQWfBolzaxMXK3W0bx5@dpg-d2o6oaur433s73b11sig-a.singapore-postgres.render.com/wecart_project
-ALLOWED_HOSTS=127.0.0.1,localhost
