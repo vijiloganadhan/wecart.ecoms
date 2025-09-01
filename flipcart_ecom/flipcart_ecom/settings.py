@@ -90,8 +90,7 @@ DATABASES = {
     }
 }
 import dj_database_url
-DATABASES['default'] = dj_database_url.parse(config("DATABASE_URL", default="sqlite:///db.sqlite3"))
-
+DATABASES = { 'default': dj_database_url.config(default='postgresql://postgres:postgres@localhost:5432/mysite', conn_max_age=600) }
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
