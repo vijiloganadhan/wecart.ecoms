@@ -14,18 +14,18 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+import os
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-e(!dju=7bgi^*q_v*fmc+90@_iddew6(=1u9)x1^&v4hbq!#ja'
+SECRET_KEY = os.environ.get("SECRET_KEY","your seceret key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = os.environ.get("DEBUG")
+from decouple import config
+ALLOWED_HOSTS = config("ALLOWED_HOSTS",default="").split(",")
 
 
 # Application definition
@@ -80,7 +80,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+import dj_django_url
+database_url=os.environ.get("DATABASE_URL")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
