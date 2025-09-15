@@ -11,29 +11,22 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-# for cloudinary
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 
-from decouple import config
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY=config("SECRET_KEY", default="django-insecure-default-key")
-
-
+from decouple import config
+SECRET_KEY = config("SECRET_KEY","your secret key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=config("DEBUG",cast=bool,default=False)
+DEBUG = config("DEBUG",cast=bool,default="False")
 
-ALLOWED_HOSTS=config("ALLOWED_HOSTS",default="").split(",")
+ALLOWED_HOSTS = config("ALLOWED_HOTS",default="").split(",")
 
 
 # Application definition
@@ -46,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'flipcart',
-    'cloudinary'    
 ]
 
 MIDDLEWARE = [
@@ -90,7 +82,7 @@ DATABASES = {
     }
 }
 import dj_database_url
-DATABASES = {"default": dj_database_url.config(conn_max_age=600, ssl_require=True)}
+DATABASES={'default':dj_database_url.config(conn_max_age=600,ssl_require=True)}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -132,7 +124,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+import os
 MEDIA_URL="media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,'/media/')
 
@@ -144,10 +136,3 @@ EMAIL_HOST_USER="mlvijayalakshmiloganadhan@gmail.com"
 EMAIL_HOST_PASSWORD ="ucpi spys nzel ysje"
 CONTACT_EMAIL="mlvijayalakshmiloganadhan@gmail.com"
 DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
-
-# cloudinary - django integrations
-cloudinary.config(
-    cloud_name = "dhy2vqhho",
-    api_key="783615335585822",
-    api_secret="UgtQ4BoE24nRF01MPK96NiJyfhg",
-)
