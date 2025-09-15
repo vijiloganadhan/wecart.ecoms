@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY","your secret key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG",cast=bool,default="False")
 
-ALLOWED_HOSTS = config("ALLOWED_HOTS",default="").split(",")
+ALLOWED_HOSTS = config("ALLOWED_HOsTS",default="").split(",")
 
 
 # Application definition
