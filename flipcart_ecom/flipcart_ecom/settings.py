@@ -27,7 +27,9 @@ SECRET_KEY = config("SECRET_KEY","your secret key")
 DEBUG = config("DEBUG",cast=bool,default="False")
 ALLOWED_HOSTS=config("ALLOWED_HOSTS",default="").split(",")
 
-
+import cloudinary
+import cloudianry.uploader
+import cloudinary.api
 # Application definition
 
 INSTALLED_APPS = [
@@ -135,3 +137,10 @@ EMAIL_HOST_USER="mlvijayalakshmiloganadhan@gmail.com"
 EMAIL_HOST_PASSWORD ="ucpi spys nzel ysje"
 CONTACT_EMAIL="mlvijayalakshmiloganadhan@gmail.com"
 DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
+
+CLOUDINARY_STROAGE={
+    'CLOUD_NAME': 'dhy2vqhho',
+    'API_KEY': '783615335585822',
+    'API_SECRET': 'UgtQ4BoE24nRF01MPK96NiJyfhg'
+}
+DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
