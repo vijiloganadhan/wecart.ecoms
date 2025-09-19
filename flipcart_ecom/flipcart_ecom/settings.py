@@ -27,10 +27,12 @@ SECRET_KEY = config("SECRET_KEY","your secret key")
 DEBUG = config("DEBUG",cast=bool,default="False")
 ALLOWED_HOSTS=config("ALLOWED_HOSTS",default="").split(",")
 
-import cloudinary
-import cloudianry.uploader
-import cloudinary.api
+
 # Application definition
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
