@@ -141,9 +141,9 @@ CONTACT_EMAIL="mlvijayalakshmiloganadhan@gmail.com"
 DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
 
 CLOUDINARY_STROAGE={
-    'CLOUD_NAME': 'dhy2vqhho',
-    'API_KEY': '783615335585822',
-    'API_SECRET': 'UgtQ4BoE24nRF01MPK96NiJyfhg'
+    'CLOUD_NAME': "dhy2vqhho",
+    'API_KEY': '794838745156711',
+    'API_SECRET': 'Rmr-54isnIzktbRl-w4lzqM-VRw'
 }
 DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
 
