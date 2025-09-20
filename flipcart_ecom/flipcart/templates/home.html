@@ -186,7 +186,7 @@
     {% for i in cat %}
     <div class="category-card">
         <a href="{% url 'products' i.id %}">
-            <img src="{{i.image.url}}" alt="Image not found">
+            <img src="{{i.image.url}}" alt="Image not found" >
             <h2 class="category-title">{{i.cname}}</h2>
         </a>
     </div>

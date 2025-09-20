@@ -5,14 +5,14 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 class Category(models.Model):
     cname=models.CharField(max_length=100)
-    image=CloudinaryField("image")
+    image=CloudinaryField("image/")
     def __str__(self):
         return self.cname
 class Products(models.Model):
     title=models.CharField(max_length=100)
     desc=models.TextField()
     price=models.IntegerField()
-    image=CloudinaryField("image")
+    image=CloudinaryField("image/")
     category=models.ForeignKey(Category,on_delete=models.CASCADE,null=True,blank=True)
     def __str__(self):
         return self.title
@@ -27,7 +27,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.name.username
 class I(models.Model):
-    image=CloudinaryField('image')
+    image=CloudinaryField('image/')
 class Payment(models.Model):
     payment_method=models.CharField(max_length=100)
     
@@ -45,6 +45,6 @@ class Buynow(models.Model):
 class Banner(models.Model):
     title=models.CharField(max_length=100)
     desc=models.TextField()
-    image=CloudinaryField('image')
+    image=CloudinaryField('image/',null=True,blank=True)
     def __str__(self):
         return self.title
