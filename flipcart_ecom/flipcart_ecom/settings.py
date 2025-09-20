@@ -139,11 +139,11 @@ EMAIL_HOST_USER="mlvijayalakshmiloganadhan@gmail.com"
 EMAIL_HOST_PASSWORD ="ucpi spys nzel ysje"
 CONTACT_EMAIL="mlvijayalakshmiloganadhan@gmail.com"
 DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
-
-CLOUDINARY_STROAGE={
-    'CLOUD_NAME': "dhy2vqhho",
-    'API_KEY': '794838745156711',
-    'API_SECRET': 'Rmr-54isnIzktbRl-w4lzqM-VRw'
-}
+import os 
+cloudinary.config(
+    CLOUD_NAME =os.getenv("CLOUD_NAME"),
+    API_KEY=os.getenv("API_KEY"),
+    API_SECRET=os.getenv("API_SECRET")
+    )
 DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
 
