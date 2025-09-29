@@ -14,7 +14,7 @@
         <th>Image</th>
         <th>Actions</th>
         <th> </th>
-        <th></th>
+        
     </tr>
     {% for i in cart %}
     <tr>
@@ -31,15 +31,6 @@
             
         </td>
         <td><a href="{% url 'removeall' i.id %}" style="text-decoration: none;color: white; background:linear-gradient(to right,rgb(180, 13, 231),rgb(242, 8, 8));padding: 10px; border-radius: 10px;font-size:20px;">remove</a></td>
-        <td>
-  <a href="{% url 'buynow' i.id %}" 
-     style="color:white; padding:10px; border-radius:10px; 
-            background: linear-gradient(to right, rgb(227, 9, 151), rgb(235, 11, 11)); 
-            text-decoration:none; font-weight:bold; display:inline-block;">
-     Buynow
-  </a>
-</td>
-
     </tr>
     {% endfor %}
 </table>
