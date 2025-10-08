@@ -125,9 +125,6 @@ def remove_cart(request,ids):
         addcart.delete()
         return redirect("cart")
     return redirect('cart')
-    
-
-
 
 def buynow(request, ids):
     if not request.user.is_authenticated:
@@ -164,7 +161,6 @@ def buynow(request, ids):
         "ibanners": Banner.objects.all()
     }
     return render(request, "buynow.html", context)
-
 
 def display_order(request):
     if not request.user.is_authenticated:

@@ -4,8 +4,9 @@
 <br><br>
 <center><p style="font-size: 40px; font-family: Georgia, 'Times New Roman', Times, serif;"><big>{{request.user.username}}'s cart </big></p></center>
 <center>
-     <p style="position:relative; left: -300px; font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif; color: rgb(10, 211, 242);"><big> total price - {{total}}</big></p>
-   
+     <p style="position:relative; left: -300px; font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif; color: rgb(10, 242, 10);"><big> total price - {{total}}</big></p>
+ 
+
 <table class="cart-table">
     <tr>
         <th>Title</th>
@@ -31,6 +32,7 @@
             
         </td>
         <td><a href="{% url 'removeall' i.id %}" style="text-decoration: none;color: white; background:linear-gradient(to right,rgb(180, 13, 231),rgb(242, 8, 8));padding: 10px; border-radius: 10px;font-size:20px;">remove</a></td>
+
     </tr>
     {% endfor %}
 </table>

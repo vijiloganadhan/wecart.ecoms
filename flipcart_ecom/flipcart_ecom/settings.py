@@ -15,24 +15,24 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+from decouple import config 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-from decouple import config
-SECRET_KEY = config("SECRET_KEY","your secret key")
+SECRET_KEY = config("SECRET_KEY",'ypur secert key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG",cast=bool,default="False")
-ALLOWED_HOSTS=config("ALLOWED_HOSTS",default="").split(",")
 
+ALLOWED_HOSTS = config("ALLOWED_HOSTS",default="").split(",")
 
-# Application definition
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
+
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -85,7 +85,7 @@ DATABASES = {
     }
 }
 import dj_database_url
-DATABASES={'default':dj_database_url.config(conn_max_age=600,ssl_require=True)}
+DATABASES = {"default": dj_database_url.config(conn_max_age=600, ssl_require=True)}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -139,11 +139,10 @@ EMAIL_HOST_USER="mlvijayalakshmiloganadhan@gmail.com"
 EMAIL_HOST_PASSWORD ="ucpi spys nzel ysje"
 CONTACT_EMAIL="mlvijayalakshmiloganadhan@gmail.com"
 DEFAULT_FROM_EMAIL=EMAIL_HOST_USER
-import os 
-cloudinary.config(
-    CLOUD_NAME =os.getenv("CLOUD_NAME"),
-    API_KEY=os.getenv("API_KEY"),
-    API_SECRET=os.getenv("API_SECRET")
-    )
-DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
 
+cloudinary_storage={
+    'cloud_name':"dhy2vqhho",
+    'api_key':"794838745156711",
+    'api_secret':"Rmr-54isnIzktbRl-w4lzqM-VRw"
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

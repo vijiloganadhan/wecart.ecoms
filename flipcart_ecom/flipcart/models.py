@@ -13,7 +13,7 @@ class Products(models.Model):
     desc=models.TextField()
     price=models.IntegerField()
     image=CloudinaryField("image/")
-    category=models.ForeignKey(Category,on_delete=models.CASCADE,null=True,blank=True)
+    category=models.ForeignKey(Category,on_delete=models.CASCADE)
     def __str__(self):
         return self.title
 class AddCart(models.Model):
@@ -45,6 +45,6 @@ class Buynow(models.Model):
 class Banner(models.Model):
     title=models.CharField(max_length=100)
     desc=models.TextField()
-    image=CloudinaryField('image/',null=True,blank=True)
+    image=CloudinaryField('image/')
     def __str__(self):
         return self.title
