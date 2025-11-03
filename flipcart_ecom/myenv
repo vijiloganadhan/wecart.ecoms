@@ -3,3 +3,4 @@ DEBUG = True
 ALLOWED_HOSTS=127.0.0.1,localhost
 DATABASE_URL=postgresql://wecart_db_user:9wAIf4oFwdYpEs3oqh5MqueB2xERqcM9@dpg-d3dlu6re5dus73bpent0-a.oregon-postgres.render.com/wecart_db
 CLOUDINARY_URL=cloudinary://794838745156711:Rmr-54isnIzktbRl-w4lzqM-VRw@dhy2vqhho
+MONGO_URL=mongodb+srv://mlvijayalakshmiloganathan_db_user:W47bXu3glAb5iLC9@cluster0.vfufdf8.mongodb.net/flipcart_wecart
